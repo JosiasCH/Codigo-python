@@ -1,0 +1,56 @@
+import random
+
+def aleatorios(a,b,c):
+    contador = a
+    lista = []
+    for i in range(0,contador):
+        randito = random.randint(b,c)
+        lista.append(randito)
+    return lista
+
+def numeros_pares():
+    lista = []
+    for i in range(1,102):
+        if i % 2 == 0:
+            lista.append(i)
+    return lista
+
+def numeros_impares():
+    lista = []
+    for i in range(1,100):
+        if i % 2 != 0:
+            lista.append(i)
+    return lista
+        
+
+ver = 1
+
+
+while ver != 0:
+    print("Elija una opcion:")
+    print("1) Crear una lista con numeros y una cantidad especifica")
+    print("2) Crear una lista de solo numeros pares del 1 hasta el 100")
+    print("3) Crear una lista de solo numeros impares del 1 hasta el 100")
+    print("4) salir del programa")
+    op = int(input("Elija una opción: "))
+    if op == 1:
+        primera_variable = int(input("Ingrese la cantidad de numeros en su lista aleaotoria:"))
+        segunda_variable = int(input("Ingrese el primer intervalo de numeros aleatorios: "))
+        tercera_variable = int(input("Ingrese el segundo intervalo de numeros aleatorios: "))
+        print("Su lista creada es:")
+        primera_funcion = aleatorios(primera_variable,segunda_variable,tercera_variable)
+        print(primera_funcion)
+        
+    if op == 2:
+        segunda_funcion = numeros_pares()
+        print("Su lista creada es:")
+        print(segunda_funcion)
+
+    if op == 3:
+        tercera_funcion = numeros_impares()
+        print("Su lista creada es:")
+        print(tercera_funcion)
+
+    if op == 4:
+        ver = 0
+        print("Usted acaba de salir del programa, muchas gracias y que tenga un excelente día, hasta pronto")
